@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-11-26T19:58:58.000Z",
+ "generated_at": "2026-11-26T22:02:17.000Z",
  "generated_at_label": "Nov 26, 2026",
  "counts": {
-  "done": 15,
+  "done": 16,
   "part": 35,
-  "miss": 139,
+  "miss": 138,
   "togo": 2,
   "block": 0,
   "later": 1,
@@ -982,9 +982,9 @@
      "when": "December"
     },
     {
-     "status": "miss",
+     "status": "done",
      "name": "Licensed-line rule per profession",
-     "when": "December"
+     "note": "Installed Nov 26 (Visit 12, d154) and verified through the production routing path: insurance→money, lease→legal, weather→everyday"
     },
     {
      "status": "miss",
