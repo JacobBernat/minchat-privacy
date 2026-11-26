@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<link rel="icon" href="data:," />
+<title>Milan Progress Tracker</title>
+<style>
+  :root{
+    --bg:#f2f1ec; --surface:#ffffff; --surface2:#faf9f6; --ink:#1c2430; --ink2:#4a5568; --ink3:#7a8699;
+    --line:#e3e0d8; --line2:#edf0f3;
+    --brand:#b3541e;
+    --done:#1e8e4f; --done-bg:#e6f4ec;
+    --part:#b97e0a; --part-bg:#fdf3dc;
+    --miss:#c53030; --miss-bg:#fdecec;
+    --togo:#2563eb; --togo-bg:#e8effe;
+    --block:#822727; --block-bg:#f6e3e3;
+    --later:#5b6b82; --later-bg:#e9edf2;
+    --shadow:0 1px 3px rgba(28,36,48,.07);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#14171c; --surface:#1e232b; --surface2:#232932; --ink:#eef1f5; --ink2:#b6bfcc; --ink3:#8a95a6;
+      --line:#333b47; --line2:#2b323d;
+      --brand:#e08a4c;
+      --done:#3ecf7f; --done-bg:#173527;
+      --part:#f0b93e; --part-bg:#3a2f14;
+      --miss:#f07373; --miss-bg:#3d1f1f;
+      --togo:#7aa5ff; --togo-bg:#1d2c4d;
+      --block:#e08a8a; --block-bg:#3a2323;
+      --later:#9fb0c6; --later-bg:#2a3342;
+      --shadow:0 1px 3px rgba(0,0,0,.35);
+    }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.45}
+  .wrap{max-width:1180px;margin:0 auto;padding:20px 16px 56px}
+  .kicker{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--brand)}
+  h1{font-size:clamp(1.7rem,4.5vw,2.5rem);line-height:1.1;margin:.25rem 0 .35rem;font-weight:800;letter-spacing:-.01em}
+  h1 .brand{color:var(--brand)}
+  .updated{font-size:.9rem;color:var(--ink2)}
+  .updated b{color:var(--ink)}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin:18px 0 8px}
+  .stat{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;box-shadow:var(--shadow)}
+  .stat .n{font-size:1.6rem;font-weight:800;line-height:1.05}
+  .stat .l{font-size:.78rem;color:var(--ink2);margin-top:2px}
+  .stat.total .n{color:var(--ink)}
+  .stat.done .n{color:var(--done)} .stat.part .n{color:var(--part)} .stat.miss .n{color:var(--miss)}
+  .stat.togo .n{color:var(--togo)} .stat.block .n{color:var(--block)} .stat.later .n{color:var(--later)}
+  .bar{display:flex;height:14px;border-radius:7px;overflow:hidden;border:1px solid var(--line);margin:10px 0 4px;background:var(--surface)}
+  .b-done{background:var(--done)} .b-part{background:var(--part)} .b-miss{background:var(--miss)}
+  .b-togo{background:var(--togo)} .b-other{background:var(--later)}
+  .pctline{font-size:.85rem;color:var(--ink2);margin-bottom:14px}
+  .filters{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 18px}
+  .filters button{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:.35rem .8rem;font-size:.82rem;cursor:pointer;min-height:2.25rem}
+  .filters button.on{border-color:var(--brand);color:var(--brand);font-weight:700}
+  .filters .cnt{opacity:.65;font-weight:400}
+  section{background:var(--surface);border:1px solid var(--line);border-radius:14px;margin:0 0 14px;box-shadow:var(--shadow);overflow:hidden}
+  section h2{font-size:1.02rem;margin:0;padding:12px 16px;background:var(--surface2);border-bottom:1px solid var(--line2);display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+  section h2 .sc{font-size:.8rem;color:var(--ink3);font-weight:600;white-space:nowrap}
+  .irow{display:flex;gap:10px;align-items:flex-start;padding:9px 16px;border-bottom:1px solid var(--line2)}
+  .irow:last-child{border-bottom:none}
+  .chip{flex:0 0 auto;font-size:.66rem;font-weight:800;letter-spacing:.06em;padding:.18rem .5rem;border-radius:999px;margin-top:.15rem;min-width:4.4rem;text-align:center}
+  .chip.done{background:var(--done-bg);color:var(--done)}
+  .chip.part{background:var(--part-bg);color:var(--part)}
+  .chip.miss{background:var(--miss-bg);color:var(--miss)}
+  .chip.togo{background:var(--togo-bg);color:var(--togo)}
+  .chip.block{background:var(--block-bg);color:var(--block)}
+  .chip.later{background:var(--later-bg);color:var(--later)}
+  .txt{flex:1 1 auto;min-width:0}
+  .note{display:block;font-size:.85rem;color:var(--ink2);margin-top:1px}
+  .tgt{flex:0 0 auto}
+  .tchip{font-size:.72rem;font-weight:700;color:var(--ink2);background:var(--surface2);border:1px solid var(--line);border-radius:999px;padding:.15rem .55rem;white-space:nowrap}
+  .err{background:var(--miss-bg);color:var(--miss);border-radius:10px;padding:12px 14px;font-size:.9rem}
+  footer{margin-top:26px;padding-top:14px;border-top:1px solid var(--line);font-size:.85rem;color:var(--ink2)}
+  footer a{color:var(--brand)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="kicker">Milan · Build Progress</div>
+  <h1>Milan <span class="brand">Progress Tracker</span></h1>
+  <div class="updated" id="updated">Loading the latest work records…</div>
+  <div class="stats" id="stats"></div>
+  <div class="bar" id="bar"></div>
+  <div class="pctline" id="pctline"></div>
+  <div class="filters" id="filters"></div>
+  <div id="sections"></div>
+  <div id="err"></div>
+  <footer>
+    Operated by Buzz Compare LLC · Contact: <a href="mailto:support@milan.bot">support@milan.bot</a>
+  </footer>
+</div>
+<script>
+var LABELS = {done:"DONE", part:"PARTLY", miss:"MISSING", togo:"TO GO", block:"BLOCKED", later:"LATER"};
+var ORDER = ["done","part","miss","togo","block","later"];
+var DATA = null, FILTER = "all";
+
+function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+function countAll(){
+  var c = {done:0,part:0,miss:0,togo:0,block:0,later:0,total:0};
+  DATA.sections.forEach(function(s){ s.items.forEach(function(it){ c[it.status]++; c.total++; }); });
+  return c;
+}
+function render(){
+  var C = countAll();
+  var pctDone = Math.round(((C.done + C.part*0.5) / C.total) * 100);
+  document.getElementById("updated").innerHTML =
+    'Last updated: <b>' + esc(DATA.generated_at_label || DATA.generated_at) + '</b> · fed from the work records on every completion pass';
+  function stat(cls,n,l){ return '<div class="stat '+cls+'"><div class="n">'+n+'</div><div class="l">'+l+'</div></div>'; }
+  document.getElementById("stats").innerHTML =
+    stat("total", C.total, "items tracked") + stat("done", C.done, "done") + stat("part", C.part, "partly") +
+    stat("miss", C.miss, "missing") + stat("togo", C.togo, "to go") + stat("block", C.block, "blocked") + stat("later", C.later, "later");
+  function w(n){ return C.total ? (n/C.total*100) : 0; }
+  var other = (C.block||0)+(C.later||0);
+  document.getElementById("bar").innerHTML =
+    '<div class="b-done" style="width:'+w(C.done)+'%"></div><div class="b-part" style="width:'+w(C.part)+'%"></div>' +
+    '<div class="b-miss" style="width:'+w(C.miss)+'%"></div><div class="b-togo" style="width:'+w(C.togo)+'%"></div>' +
+    '<div class="b-other" style="width:'+w(other)+'%"></div>';
+  document.getElementById("pctline").textContent =
+    pctDone + "% complete (done counts full, partly counts half) · " + C.done + " of " + C.total + " fully done";
+  var f = '<button data-f="all" class="'+(FILTER==="all"?"on":"")+'">All <span class="cnt">'+C.total+'</span></button>';
+  ORDER.forEach(function(k){
+    f += '<button data-f="'+k+'" class="'+(FILTER===k?"on":"")+'">'+LABELS[k]+' <span class="cnt">'+C[k]+'</span></button>';
+  });
+  document.getElementById("filters").innerHTML = f;
+  Array.prototype.forEach.call(document.querySelectorAll(".filters button"), function(b){
+    b.addEventListener("click", function(){ FILTER = b.getAttribute("data-f"); render(); });
+  });
+  var h = "";
+  DATA.sections.forEach(function(s){
+    var rows = s.items.filter(function(it){ return FILTER==="all" || it.status===FILTER; });
+    if(!rows.length) return;
+    var sc = {}; s.items.forEach(function(it){ sc[it.status]=(sc[it.status]||0)+1; });
+    var scTxt = ORDER.filter(function(k){ return sc[k]; }).map(function(k){ return sc[k]+" "+LABELS[k].toLowerCase(); }).join(" · ");
+    h += '<section><h2><span>'+esc(s.title)+'</span><span class="sc">'+esc(scTxt)+'</span></h2>';
+    rows.forEach(function(it){
+      h += '<div class="irow"><span class="chip '+it.status+'">'+LABELS[it.status]+'</span>' +
+           '<div class="txt">'+esc(it.name)+(it.note ? '<span class="note">'+esc(it.note)+'</span>' : '')+'</div>' +
+           (it.when ? '<span class="tgt"><span class="tchip">'+esc(it.when)+'</span></span>' : '') + '</div>';
+    });
+    h += '</section>';
+  });
+  document.getElementById("sections").innerHTML = h || '<div class="err">No items with this status.</div>';
+}
+fetch("tracker-data.json", {cache:"no-store"})
+  .then(function(r){ if(!r.ok) throw new Error("HTTP "+r.status); return r.json(); })
+  .then(function(d){ DATA = d; render(); })
+  .catch(function(e){
+    document.getElementById("updated").textContent = "";
+    document.getElementById("err").innerHTML = '<div class="err">Could not load the tracker data ('+esc(e.message)+'). Please reload.</div>';
+  });
+</script>
+</body>
+</html>
