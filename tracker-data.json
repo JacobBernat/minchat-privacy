@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-11-26T22:02:17.000Z",
+ "generated_at": "2026-11-26T23:08:27.000Z",
  "generated_at_label": "Nov 26, 2026",
  "counts": {
   "done": 16,
-  "part": 35,
-  "miss": 138,
+  "part": 36,
+  "miss": 137,
   "togo": 2,
   "block": 0,
   "later": 1,
@@ -84,7 +84,8 @@
     },
     {
      "status": "miss",
-     "name": "Run & test code on the machine"
+     "name": "Run & test code on the machine",
+     "note": "Sandbox proof ran Nov 26 (Visit 13): verdict NOT ISOLATED — the network backstop was breached (owner-filter scripts lack SANDBOX handling) and the files probe crashed; the worker is installed but left disabled, fixes owed by the build side"
     },
     {
      "status": "miss",
@@ -117,8 +118,7 @@
     {
      "status": "part",
      "name": "Read PDFs & documents",
-     "note": "Switches on Nov 26",
-     "when": "Nov 26"
+     "note": "Not switched on: the media keys were found in no Google Cloud project as of Nov 26 (Visit 13), so the see-key gate could not run; provisioning the key in the office project is the next step"
     },
     {
      "status": "part",
@@ -152,14 +152,12 @@
     {
      "status": "part",
      "name": "Generate images",
-     "note": "Switches on Nov 26",
-     "when": "Nov 26"
+     "note": "Not switched on: the media keys were found in no Google Cloud project as of Nov 26 (Visit 13), so the image-key gate could not run; provisioning the key in the office project is the next step"
     },
     {
      "status": "part",
      "name": "Read & edit photos",
-     "note": "Switches on Nov 26",
-     "when": "Nov 26"
+     "note": "Not switched on: the media keys were found in no Google Cloud project as of Nov 26 (Visit 13), so the see-key gate could not run; provisioning the key in the office project is the next step"
     },
     {
      "status": "part",
@@ -183,8 +181,7 @@
     {
      "status": "part",
      "name": "Understand video, including motion",
-     "note": "Switches on Nov 26",
-     "when": "Nov 26"
+     "note": "Not switched on: the media keys were found in no Google Cloud project as of Nov 26 (Visit 13), so the video-key gate could not run; provisioning the key in the office project is the next step"
     },
     {
      "status": "miss",
@@ -571,9 +568,9 @@
      "name": "Photo library organising & albums"
     },
     {
-     "status": "miss",
+     "status": "part",
      "name": "Backup checks",
-     "note": "Knowing your important things are actually backed up. Verified Nov 26: no snapshots or backup policies exist yet."
+     "note": "Knowing your important things are actually backed up. Verified Nov 26 (Visit 13): daily GCP snapshot policy office-worker-daily-30d (daily 03:00, 30-day retention) created and verified attached to the VM boot disk — the schedule is in place, but no completed snapshot or restore test has been verified yet."
     },
     {
      "status": "miss",
@@ -603,8 +600,7 @@
     {
      "status": "part",
      "name": "Read anything — handwriting, scans, screenshots",
-     "note": "Photo reading arrives Nov 26; handwriting/OCR is unproven",
-     "when": "Nov 26"
+     "note": "Photo reading has not switched on: the media keys were found in no Google Cloud project as of Nov 26 (Visit 13); provisioning the key in the office project is the next step. Handwriting/OCR is unproven"
     },
     {
      "status": "miss",
