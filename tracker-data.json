@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-26T18:22:20.000Z",
+ "generated_at": "2026-11-26T19:58:58.000Z",
  "generated_at_label": "Nov 26, 2026",
  "counts": {
   "done": 15,
@@ -380,7 +380,7 @@
     {
      "status": "part",
      "name": "Meta business verification",
-     "note": "Rejected Nov 26 morning (document not an accepted type — the bank letter PDF was image-only, no readable text). Resubmitted Nov 26, 11:33 AM ET with a text-readable copy of the same Dime letter; confirmed 'In review' on both Meta pages (Security Center and Business info) after submission. Meta says about 2 business days. Follow-up check Nov 30."
+     "note": "Rejected again Nov 26 (live-checked 2:57 PM ET): the text-readable copy of the Dime letter was also rejected with the same 'isn't an accepted type' reason for legal name, address and phone. Two file versions, identical objection — the likely cause is the document category mismatch (the flow offers no 'Bank Letter' type). Next move: submit a document matching an offered type, e.g. a real Dime bank statement for the LLC. Follow-up check Nov 30."
     },
     {
      "status": "togo",
