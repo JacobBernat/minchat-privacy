@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-26T17:14:43.688Z",
+ "generated_at": "2026-11-26T18:22:20.000Z",
  "generated_at_label": "Nov 26, 2026",
  "counts": {
   "done": 15,
@@ -573,7 +573,7 @@
     {
      "status": "miss",
      "name": "Backup checks",
-     "note": "Knowing your important things are actually backed up"
+     "note": "Knowing your important things are actually backed up. Verified Nov 26: no snapshots or backup policies exist yet."
     },
     {
      "status": "miss",
