@@ -1,0 +1,155 @@
+{
+  "asof_note": "Per-kind blind-test counts are still accumulating. Where a count is not final yet, this page says “rounds in progress” rather than showing an invented total.",
+  "generated_at": "2026-11-26T23:08:00-05:00",
+  "generated_at_label": "Nov 26, 2026 · 11:08 PM ET",
+  "how_it_works": [
+    "Milan trains candidate brains per job kind with blind tests: the model answers without knowing it is being graded, and the result is scored against the expected outcome.",
+    "Lessons come from results only — never from the owner's wording. Test questions are never stored.",
+    "There are no permanent incumbents. Every model re-proves itself on a rolling cycle: a re-trial every 30 days or every 50 jobs in a kind, whichever comes first.",
+    "A model or provider change — a new release, a price change, a retirement — re-opens testing for the affected kinds."
+  ],
+  "in_use": [
+    {
+      "assignment": "Architect, chat and core building",
+      "model": "Claude (Fable)",
+      "note": "Incumbent — in use now.",
+      "icon": "logos/anthropic.svg"
+    },
+    {
+      "assignment": "Media lanes — photo, PDF and video reading, and image creation",
+      "model": "Gemini",
+      "note": "Incumbent — gates passed Nov 26; in use now at machine level.",
+      "icon": "logos/gemini.svg"
+    },
+    {
+      "assignment": "Drafting and research departments",
+      "model": "Grok",
+      "note": "In use now since Nov 26.",
+      "icon": "logos/grok.svg"
+    }
+  ],
+  "in_use_note": "No challenger has graduated yet. The first graduation proposals come only after the blind-test rounds accumulate enough straight good results in a kind.",
+  "models": [
+    {
+      "best": "Sets the reference results other brains are graded against",
+      "kinds": "Architecture, chat, core building",
+      "model": "Claude (Fable)",
+      "status": "In use now",
+      "status_class": "done",
+      "tests": "Incumbent standard — rounds in progress",
+      "icon": "logos/anthropic.svg"
+    },
+    {
+      "best": "All four lane gates passed on the Nov 26 proofs",
+      "kinds": "Media reading (photos, PDFs, video) and image creation",
+      "model": "Gemini",
+      "status": "In use now",
+      "status_class": "done",
+      "tests": "Gate proofs passed in all four media lanes, Nov 26",
+      "icon": "logos/gemini.svg"
+    },
+    {
+      "best": "Tasks 41–70 graded STRONG on independent review",
+      "kinds": "Drafting and research",
+      "model": "Grok",
+      "status": "In use now",
+      "status_class": "done",
+      "tests": "Authored test-bank tasks 41–100 (with Grok Bot)",
+      "icon": "logos/grok.svg"
+    },
+    {
+      "best": "Not eligible for personal-job results",
+      "kinds": "Non-personal synthetic tests only",
+      "model": "DeepSeek",
+      "status": "Restricted",
+      "status_class": "block",
+      "tests": "Synthetic rounds only — never personal jobs",
+      "icon": "logos/deepseek.svg"
+    },
+    {
+      "best": "Awaiting first graded rounds",
+      "kinds": "To be assigned per kind",
+      "model": "Groq GPT-OSS",
+      "status": "In training queue",
+      "status_class": "togo",
+      "tests": "Census complete Nov 25 — blind-test rounds not yet run",
+      "icon": "logos/groq.svg",
+      "icon_full": true
+    },
+    {
+      "best": "Awaiting first graded rounds",
+      "kinds": "To be assigned per kind",
+      "model": "OpenAI GPT",
+      "status": "In training queue",
+      "status_class": "togo",
+      "tests": "Census complete Nov 25 — blind-test rounds not yet run",
+      "icon": "logos/openai.svg"
+    },
+    {
+      "best": "Awaiting first graded rounds",
+      "kinds": "To be assigned per kind",
+      "model": "Meta Llama",
+      "status": "In training queue",
+      "status_class": "togo",
+      "tests": "Census complete Nov 25 — blind-test rounds not yet run",
+      "icon": "logos/meta.svg"
+    }
+  ],
+  "notes": [
+    "Blind-test counts per job kind are still accumulating; rows above show the verified state on record at the stamp, not projected totals.",
+    "DeepSeek's restriction is a privacy ruling (Nov 25): it is never used for personal jobs, whatever its test scores."
+  ],
+  "rules": [
+    "Graduation: a cheaper brain is proposed only after ≥ 35 straight good blind tests in a job kind, plus 14 days of history in that kind.",
+    "The first switch in each kind needs the owner's yes.",
+    "Every switch is on probation for 20 jobs or 14 days, with automatic rollback on any drop in results — a single owner correction also rolls it back.",
+    "Training data is results only — never personal information. The trained core can be copied without the personal layer."
+  ],
+  "stats": [
+    {
+      "label": "tasks in the test bank",
+      "value": "100"
+    },
+    {
+      "label": "held-out launch-gate tasks, unseen by every builder",
+      "value": "50"
+    },
+    {
+      "label": "useful-correct required at the launch gate",
+      "value": "≥ 90%"
+    },
+    {
+      "label": "citation match required at the launch gate",
+      "value": "≥ 95%"
+    },
+    {
+      "label": "training budget, Nov 24 – Dec 7, 2026",
+      "value": "$10/day"
+    }
+  ],
+  "test_bank": {
+    "gates": [
+      "≥ 90% useful-correct on the bank",
+      "≥ 95% citation match",
+      "Zero unauthorized actions across the whole bank"
+    ],
+    "held_out": "50 of the 60 Grok-authored tasks form the held-out launch-gate set — unseen by every builder, so the gate measures real ability, not memorised answers.",
+    "rows": [
+      {
+        "author": "Claude",
+        "note": "Foundation set for the bank.",
+        "range": "Tasks 1–40"
+      },
+      {
+        "author": "Grok chat",
+        "note": "Graded STRONG on independent review.",
+        "range": "Tasks 41–70"
+      },
+      {
+        "author": "Grok Bot",
+        "note": "Research-department set.",
+        "range": "Tasks 71–100"
+      }
+    ]
+  }
+}

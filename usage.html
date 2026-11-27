@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M7 39 V9 L24 28 L41 9 V39' fill='none' stroke='%23b3541e' stroke-width='6.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+<title>Milan — Model Usage &amp; Cost</title>
+<style>
+  :root{
+    --bg:#f2f1ec; --surface:#ffffff; --surface2:#faf9f6; --ink:#1c2430; --ink2:#4a5568; --ink3:#7a8699;
+    --line:#e3e0d8; --line2:#edf0f3;
+    --brand:#b3541e;
+    --done:#1e8e4f; --done-bg:#e6f4ec;
+    --part:#b97e0a; --part-bg:#fdf3dc;
+    --miss:#c53030; --miss-bg:#fdecec;
+    --togo:#2563eb; --togo-bg:#e8effe;
+    --block:#822727; --block-bg:#f6e3e3;
+    --later:#5b6b82; --later-bg:#e9edf2;
+    --shadow:0 1px 3px rgba(28,36,48,.07);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#14171c; --surface:#1e232b; --surface2:#232932; --ink:#eef1f5; --ink2:#b6bfcc; --ink3:#8a95a6;
+      --line:#333b47; --line2:#2b323d;
+      --brand:#e08a4c;
+      --done:#3ecf7f; --done-bg:#173527;
+      --part:#f0b93e; --part-bg:#3a2f14;
+      --miss:#f07373; --miss-bg:#3d1f1f;
+      --togo:#7aa5ff; --togo-bg:#1d2c4d;
+      --block:#e08a8a; --block-bg:#3a2323;
+      --later:#9fb0c6; --later-bg:#2a3342;
+      --shadow:0 1px 3px rgba(0,0,0,.35);
+    }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.45}
+  .wrap{max-width:1180px;margin:0 auto;padding:20px 16px 56px}
+  .brandhead{display:flex;align-items:center;gap:10px;margin:0 0 10px;color:var(--brand)}
+  .brandhead svg{width:34px;height:34px;flex:0 0 auto;display:block}
+  .brandhead .wm{font-size:1.4rem;font-weight:800;letter-spacing:-.01em;color:var(--ink)}
+  .kicker{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--brand)}
+  h1{font-size:clamp(1.7rem,4.5vw,2.5rem);line-height:1.1;margin:.25rem 0 .35rem;font-weight:800;letter-spacing:-.01em}
+  h1 .brand{color:var(--brand)}
+  .updated{font-size:.9rem;color:var(--ink2)}
+  .updated b{color:var(--ink)}
+  .nav{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 4px}
+  .nav a{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:.35rem .85rem;font-size:.82rem;text-decoration:none;min-height:2.25rem;display:inline-flex;align-items:center}
+  .nav a.on{border-color:var(--brand);color:var(--brand);font-weight:700}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:18px 0 8px}
+  .stat{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;box-shadow:var(--shadow)}
+  .stat .n{font-size:1.45rem;font-weight:800;line-height:1.05;color:var(--brand)}
+  .stat .l{font-size:.78rem;color:var(--ink2);margin-top:3px}
+  section{background:var(--surface);border:1px solid var(--line);border-radius:14px;margin:0 0 14px;box-shadow:var(--shadow);overflow:hidden}
+  section h2{font-size:1.02rem;margin:0;padding:12px 16px;background:var(--surface2);border-bottom:1px solid var(--line2);display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+  section h2 .sc{font-size:.8rem;color:var(--ink3);font-weight:600;white-space:nowrap}
+  .pad{padding:12px 16px}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;margin:0 0 14px}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:16px}
+  .card .head{display:flex;gap:12px;align-items:center;margin-bottom:6px}
+  .logo{flex:0 0 auto;width:46px;height:46px;border-radius:13px;background:#232932;display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .logo img{width:27px;height:27px;display:block}
+  .logo img.full{width:100%;height:100%}
+  .card .nm{font-size:1.05rem;font-weight:800;line-height:1.15}
+  .card .pv{font-size:.8rem;color:var(--ink3);font-weight:600}
+  .card .price{font-size:.9rem;font-weight:700;color:var(--brand);margin:2px 0 8px}
+  .card .dt{font-size:.88rem;color:var(--ink2);margin:0 0 6px}
+  .meter{margin:10px 0 2px}
+  .meter .ml{display:flex;justify-content:space-between;gap:8px;font-size:.8rem;font-weight:700}
+  .meter .ml .mp{color:var(--brand)}
+  .meter .track{height:9px;border-radius:5px;background:var(--surface2);border:1px solid var(--line);overflow:hidden;margin:4px 0 3px}
+  .meter .fill{height:100%;background:var(--brand)}
+  .meter .mn{font-size:.78rem;color:var(--ink3)}
+  .tblwrap{overflow-x:auto}
+  table{width:100%;border-collapse:collapse;font-size:.9rem;min-width:760px}
+  th{ text-align:left;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);padding:10px 14px;border-bottom:1px solid var(--line);background:var(--surface2);white-space:nowrap}
+  td{padding:9px 14px;border-bottom:1px solid var(--line2);vertical-align:top}
+  tr:last-child td{border-bottom:none}
+  td.mname{font-weight:700;white-space:nowrap}
+  .mcell{display:flex;gap:9px;align-items:center}
+  .logo.sm{width:32px;height:32px;border-radius:9px}
+  .logo.sm img{width:19px;height:19px}
+  .logo.sm img.full{width:100%;height:100%}
+  .nmtr{color:var(--ink3);font-style:italic;white-space:nowrap}
+  .notes{font-size:.88rem;color:var(--ink2)}
+  .notes li{margin:0 0 5px}
+  .err{background:var(--miss-bg);color:var(--miss);border-radius:10px;padding:12px 14px;font-size:.9rem}
+  footer{margin-top:26px;padding-top:14px;border-top:1px solid var(--line);font-size:.85rem;color:var(--ink2)}
+  footer a{color:var(--brand)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brandhead">
+    <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M7 39 V9 L24 28 L41 9 V39" fill="none" stroke="currentColor" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span class="wm">Milan</span>
+  </div>
+  <div class="kicker">Milan · Money Side</div>
+  <h1>Model Usage <span class="brand">&amp; Cost</span></h1>
+  <div class="updated" id="updated">Loading the latest usage records…</div>
+  <nav class="nav">
+    <a href="tracker.html">Progress tracker</a>
+    <a href="usage.html" class="on">Usage</a>
+    <a href="training.html">Training</a>
+    <a href="privacy.html">Privacy</a>
+  </nav>
+  <div class="stats" id="money"></div>
+  <div id="subs"></div>
+  <div id="models"></div>
+  <div id="notes"></div>
+  <div id="err"></div>
+  <footer>
+    Operated by Buzz Compare LLC · Contact: <a href="mailto:support@milan.bot">support@milan.bot</a>
+  </footer>
+</div>
+<script>
+var DATA = null;
+function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+function logo(icon, full, cls){
+  return '<span class="logo '+(cls||'')+'"><img src="'+esc(icon)+'" alt="" loading="lazy"'+(full ? ' class="full"' : '')+'></span>';
+}
+function render(){
+  document.getElementById("updated").innerHTML =
+    'Figures as of: <b>' + esc(DATA.generated_at_label || DATA.generated_at) + '</b> · ' + esc(DATA.asof_note || '');
+  document.getElementById("money").innerHTML = DATA.money_summary.map(function(m){
+    return '<div class="stat"><div class="n">'+esc(m.value)+'</div><div class="l">'+esc(m.label)+'</div></div>';
+  }).join("");
+  var h = '<div class="cards">';
+  DATA.subscriptions.forEach(function(s){
+    h += '<div class="card"><div class="head">' + logo(s.icon, s.icon_full) +
+      '<div><div class="nm">'+esc(s.name)+'</div><div class="pv">'+esc(s.provider)+'</div></div></div>' +
+      '<div class="price">'+esc(s.price)+'</div>';
+    (s.details||[]).forEach(function(d){ h += '<p class="dt">'+esc(d)+'</p>'; });
+    (s.meters||[]).forEach(function(m){
+      h += '<div class="meter"><div class="ml"><span>'+esc(m.label)+'</span><span class="mp">'+m.pct+'%</span></div>' +
+        '<div class="track"><div class="fill" style="width:'+m.pct+'%"></div></div>' +
+        '<div class="mn">'+esc(m.note)+'</div></div>';
+    });
+    h += '</div>';
+  });
+  h += '</div>';
+  document.getElementById("subs").innerHTML = h;
+  var t = '<section><h2><span>Per-model usage</span><span class="sc">verified records only</span></h2><div class="tblwrap"><table>' +
+    '<tr><th>Model</th><th>Role</th><th>Prompts / tasks</th><th>Tokens</th><th>Settled cost</th><th>Result</th></tr>';
+  DATA.models.forEach(function(m){
+    t += '<tr><td class="mname"><span class="mcell">'+logo(m.icon, m.icon_full, 'sm')+esc(m.model)+'</span></td>' +
+      '<td>'+esc(m.role)+'</td>' +
+      '<td>'+(m.prompts ? esc(m.prompts) : '<span class="nmtr">Not metered yet</span>')+'</td>' +
+      '<td>'+(m.tokens ? esc(m.tokens) : '<span class="nmtr">Not metered yet</span>')+'</td>' +
+      '<td>'+esc(m.cost)+'</td><td>'+esc(m.result)+'</td></tr>';
+  });
+  t += '</table></div></section>';
+  document.getElementById("models").innerHTML = t;
+  document.getElementById("notes").innerHTML =
+    '<section><h2><span>Notes</span></h2><div class="pad"><ul class="notes" style="margin:0;padding-left:18px">' +
+    DATA.notes.map(function(n){ return '<li>'+esc(n)+'</li>'; }).join("") + '</ul></div></section>';
+}
+fetch("usage-data.json", {cache:"no-store"})
+  .then(function(r){ if(!r.ok) throw new Error("HTTP "+r.status); return r.json(); })
+  .then(function(d){ DATA = d; render(); })
+  .catch(function(e){
+    document.getElementById("updated").textContent = "";
+    document.getElementById("err").innerHTML = '<div class="err">Could not load the usage data ('+esc(e.message)+'). Please reload.</div>';
+  });
+</script>
+</body>
+</html>
