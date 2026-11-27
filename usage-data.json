@@ -1,188 +1,208 @@
 {
-  "asof_note": "Figures below are the verified readings and gate proofs on record at the stamp above. Full per-prompt metering starts with the usage feed; anything not yet metered is marked as such rather than estimated.",
-  "generated_at": "2026-11-26T23:08:00-05:00",
-  "generated_at_label": "Nov 26, 2026 · 11:08 PM ET",
-  "models": [
+ "asof_note": "Media-lane figures are now pulled from Milan's own settled-cost ledgers on the machine (calls, tokens in/out, settled cents) — the Nov 26 readings include the first live WhatsApp photo and video tests. API-account metering (Anthropic API, Grok API, OpenRouter) joins this feed as those routes carry traffic; anything not yet metered is marked as such rather than estimated.",
+ "generated_at": "2026-11-26T23:45:00-05:00",
+ "generated_at_label": "Nov 26, 2026 · 11:45 PM ET",
+ "models": [
+  {
+   "cost": "0.566325¢ settled (Nov 26 day total)",
+   "model": "Gemini 3.8 Flash",
+   "prompts": "2 calls on Nov 26 (1 machine gate proof + 1 live WhatsApp photo)",
+   "result": "Gate passed Nov 26 · LIVE PASS Nov 26, 11:31 PM ET — read the Chaveirim flyer photo in full, answered in 25s",
+   "role": "Photo reading — Milan media lane",
+   "tokens": "2,391 in / 1,032 out (Nov 26 day total, from the lane ledger)",
+   "icon": "logos/gemini.svg"
+  },
+  {
+   "cost": "0.054825¢ settled",
+   "model": "Gemini",
+   "prompts": "1 gate proof call",
+   "result": "Gate test passed, Nov 26",
+   "role": "PDF / document reading — Milan media lane",
+   "tokens": null,
+   "icon": "logos/gemini.svg"
+  },
+  {
+   "cost": "0.5532¢ settled (Nov 26 day total)",
+   "model": "Gemini",
+   "prompts": "2 calls on Nov 26 (1 machine gate proof + 1 live WhatsApp video)",
+   "result": "Gate passed Nov 26 · LIVE PASS Nov 26, 11:31 PM ET — 4-second clip described accurately, answered in 17s",
+   "role": "Video reading — Milan media lane",
+   "tokens": "1,341 in / 1,207 out (Nov 26 day total, from the lane ledger)",
+   "icon": "logos/gemini.svg"
+  },
+  {
+   "cost": "4.0244¢ worst case per call · 100¢ daily ceiling",
+   "model": "Gemini 3.1 Flash-Lite Image",
+   "prompts": "Gate calls: lifetime gate budget 2 of 2 used",
+   "result": "Gate passed at 1024×1024 on the machine route, Nov 26 · live creation over WhatsApp currently refuses — the capability-attach fix rides the Nov 27 install, then re-test",
+   "role": "Image creation — Milan media lane",
+   "tokens": null,
+   "icon": "logos/gemini.svg"
+  },
+  {
+   "cost": "A fraction of a cent, metered",
+   "model": "Grok 4.3 (API)",
+   "prompts": "1 test call",
+   "result": "HTTP 200, Nov 26",
+   "role": "API connectivity test",
+   "tokens": null,
+   "icon": "logos/grok.svg"
+  },
+  {
+   "cost": "Not metered — subscription pool only",
+   "model": "Claude (Fable)",
+   "prompts": null,
+   "result": "Pool readings: 87% all-models weekly · 24% Fable-only weekly (Nov 26)",
+   "role": "Architect / core building",
+   "tokens": null,
+   "icon": "logos/anthropic.svg"
+  },
+  {
+   "cost": "$0 to date",
+   "model": "DeepSeek",
+   "prompts": null,
+   "result": "Barred from all personal jobs — privacy ruling, Nov 25",
+   "role": "Test-bank synthetics only",
+   "tokens": null,
+   "icon": "logos/deepseek.svg"
+  },
+  {
+   "cost": "Included in the ≈ $7.50 outside-consult total",
+   "model": "Groq GPT-OSS",
+   "prompts": null,
+   "result": "Consulted via OpenRouter",
+   "role": "Seven-brains census member (Nov 25)",
+   "tokens": null,
+   "icon": "logos/groq.svg",
+   "icon_full": true
+  },
+  {
+   "cost": "Included in the ≈ $7.50 outside-consult total",
+   "model": "OpenAI GPT",
+   "prompts": null,
+   "result": "Consulted via OpenRouter",
+   "role": "Seven-brains census member (Nov 25)",
+   "tokens": null,
+   "icon": "logos/openai.svg"
+  },
+  {
+   "cost": "Included in the ≈ $7.50 outside-consult total",
+   "model": "Meta Llama",
+   "prompts": null,
+   "result": "Consulted via OpenRouter",
+   "role": "Seven-brains census member (Nov 25)",
+   "tokens": null,
+   "icon": "logos/meta.svg"
+  },
+  {
+   "model": "Anthropic API (Milan's own key)",
+   "role": "Milan's API route — top-model work and training",
+   "prompts": null,
+   "tokens": null,
+   "cost": "No production traffic yet",
+   "result": "Key active since Nov 20, 2026 · organisation linked Nov 25 · $200/mo Ultra API credits land from Dec 25 — metering starts when the API route carries work",
+   "icon": "logos/anthropic.svg"
+  },
+  {
+   "model": "Groq (provider)",
+   "role": "Fast inference provider — census consults ran via OpenRouter",
+   "prompts": null,
+   "tokens": null,
+   "cost": "Included in the ≈ $7.50 outside-consult total",
+   "result": "Status: consulted via OpenRouter · no direct metered traffic yet",
+   "icon": "logos/groq.svg"
+  }
+ ],
+ "money_summary": [
+  {
+   "label": "Claude Ultra, all-in via Google Play (incl. tax)",
+   "value": "$272/mo"
+  },
+  {
+   "label": "metered API & media spend to date ($7.50 outside consults + 8.57¢ media gates)",
+   "value": "≈ $7.59"
+  },
+  {
+   "label": "total paid media-gate spend, Visit 14 (Nov 26)",
+   "value": "8.57¢"
+  },
+  {
+   "label": "Anthropic API credits included with Ultra — first landing ~Dec 25, 2026",
+   "value": "$200/mo"
+  }
+ ],
+ "notes": [
+  "Media-lane metering is real: calls, tokens and settled cents come from the egress ledgers on Milan's machine, read Nov 26, 2026.",
+  "Researched, not integrated: fal.ai (Seedream image route) and Vertex AI — no traffic, $0 spent; named here so the roster is complete.",
+  "Per-prompt token counts are not exposed for subscription-pool work (Claude/Grok web apps) — those lines show pool readings instead.",
+  "Visit 14 total paid media spend: 8.572525¢ across all four media lanes.",
+  "Daily call budgets on the media lanes are small during proving (photo and video lanes: 2 calls/day on Nov 26) — raising them is a settings decision at the next visit."
+ ],
+ "subscriptions": [
+  {
+   "details": [
+    "Top-tier plan (formerly Max 20x). Weekly pool is shared across models.",
+    "Includes $200/mo in Anthropic API credits, first landing ~Dec 25, 2026, then monthly on the 25th."
+   ],
+   "meters": [
     {
-      "cost": "0.19935¢ settled",
-      "model": "Gemini 3.8 Flash",
-      "prompts": "1 gate proof call",
-      "result": "Gate test passed, Nov 26",
-      "role": "Photo reading — Milan media lane",
-      "tokens": null,
-      "icon": "logos/gemini.svg"
+     "label": "Weekly pool — all models",
+     "note": "87% used as of Nov 26, 2026, 10:59 PM ET · resets Thu Dec 3, ~3:00 AM ET",
+     "pct": 87
     },
     {
-      "cost": "0.054825¢ settled",
-      "model": "Gemini",
-      "prompts": "1 gate proof call",
-      "result": "Gate test passed, Nov 26",
-      "role": "PDF / document reading — Milan media lane",
-      "tokens": null,
-      "icon": "logos/gemini.svg"
+     "label": "Weekly pool — Fable only",
+     "note": "24% used · same Thu Dec 3 reset",
+     "pct": 24
     },
     {
-      "cost": "0.26955¢ settled",
-      "model": "Gemini",
-      "prompts": "1 gate proof call (10-second test clip)",
-      "result": "Gate test passed, Nov 26",
-      "role": "Video reading — Milan media lane",
-      "tokens": null,
-      "icon": "logos/gemini.svg"
-    },
-    {
-      "cost": "4.0244¢ worst case per call · 100¢ daily ceiling",
-      "model": "Gemini 3.1 Flash-Lite Image",
-      "prompts": "Gate calls: lifetime gate budget 2 of 2 used",
-      "result": "Gate test passed at 1024×1024, Nov 26",
-      "role": "Image creation — Milan media lane",
-      "tokens": null,
-      "icon": "logos/gemini.svg"
-    },
-    {
-      "cost": "A fraction of a cent, metered",
-      "model": "Grok 4.3 (API)",
-      "prompts": "1 test call",
-      "result": "HTTP 200, Nov 26",
-      "role": "API connectivity test",
-      "tokens": null,
-      "icon": "logos/grok.svg"
-    },
-    {
-      "cost": "Not metered — subscription pool only",
-      "model": "Claude (Fable)",
-      "prompts": null,
-      "result": "Pool readings: 87% all-models weekly · 24% Fable-only weekly (Nov 26)",
-      "role": "Architect / core building",
-      "tokens": null,
-      "icon": "logos/anthropic.svg"
-    },
-    {
-      "cost": "$0 to date",
-      "model": "DeepSeek",
-      "prompts": null,
-      "result": "Barred from all personal jobs — privacy ruling, Nov 25",
-      "role": "Test-bank synthetics only",
-      "tokens": null,
-      "icon": "logos/deepseek.svg"
-    },
-    {
-      "cost": "Included in the ≈ $7.50 outside-consult total",
-      "model": "Groq GPT-OSS",
-      "prompts": null,
-      "result": "Consulted via OpenRouter",
-      "role": "Seven-brains census member (Nov 25)",
-      "tokens": null,
-      "icon": "logos/groq.svg",
-      "icon_full": true
-    },
-    {
-      "cost": "Included in the ≈ $7.50 outside-consult total",
-      "model": "OpenAI GPT",
-      "prompts": null,
-      "result": "Consulted via OpenRouter",
-      "role": "Seven-brains census member (Nov 25)",
-      "tokens": null,
-      "icon": "logos/openai.svg"
-    },
-    {
-      "cost": "Included in the ≈ $7.50 outside-consult total",
-      "model": "Meta Llama",
-      "prompts": null,
-      "result": "Consulted via OpenRouter",
-      "role": "Seven-brains census member (Nov 25)",
-      "tokens": null,
-      "icon": "logos/meta.svg"
+     "label": "Current session (at last reading)",
+     "note": "47% used at the Nov 26, 10:59 PM ET reading",
+     "pct": 47
     }
-  ],
-  "money_summary": [
+   ],
+   "name": "Claude Ultra",
+   "price": "$250/mo via Google Play · $272 all-in with tax",
+   "provider": "Anthropic",
+   "icon": "logos/anthropic.svg"
+  },
+  {
+   "details": [
+    "Weekly included usage. Grok Bot line showed 522.1K tokens, all counted as “Included”, $0 credit usage (Nov 26).",
+    "API: Tier 0, balance $0.00. The “Milan build” API key is active — first test call succeeded Nov 26."
+   ],
+   "meters": [],
+   "name": "Grok Premium",
+   "price": "Subscription · renews Jan 26, 2027",
+   "provider": "xAI",
+   "icon": "logos/grok.svg"
+  },
+  {
+   "details": [
+    "Balance $8.74 observed Nov 25, 2026.",
+    "Total outside-consult spend ≈ $7.50 — the seven-brains census plus grand panels (round 1 ≈ $6.01, round 2 ≈ $1.04)."
+   ],
+   "meters": [],
+   "name": "OpenRouter",
+   "price": "Pay-as-you-go balance",
+   "provider": "Outside-consult route",
+   "icon": "logos/openrouter.svg"
+  },
+  {
+   "details": [
+    "Pace is checked on working days against a six-day week (Saturday off), with unused share rolling forward."
+   ],
+   "meters": [
     {
-      "label": "Claude Ultra, all-in via Google Play (incl. tax)",
-      "value": "$272/mo"
-    },
-    {
-      "label": "metered API & media spend to date ($7.50 outside consults + 8.57¢ media gates)",
-      "value": "≈ $7.59"
-    },
-    {
-      "label": "total paid media-gate spend, Visit 14 (Nov 26)",
-      "value": "8.57¢"
-    },
-    {
-      "label": "Anthropic API credits included with Ultra — first landing ~Dec 25, 2026",
-      "value": "$200/mo"
+     "label": "Weekly usage at Nov 26 check",
+     "note": "100% used at the Nov 26 check · resets Sat Nov 28, 5:56 PM ET",
+     "pct": 100
     }
-  ],
-  "notes": [
-    "Not metered yet — per-prompt token counts are not exposed for subscription-pool work; tracking starts with the usage feed.",
-    "Media-lane token counts are not metered yet — the settled costs above are the verified gate-proof charges on record.",
-    "Visit 14 total paid media spend: 8.572525¢ across all four media lanes."
-  ],
-  "subscriptions": [
-    {
-      "details": [
-        "Top-tier plan (formerly Max 20x). Weekly pool is shared across models.",
-        "Includes $200/mo in Anthropic API credits, first landing ~Dec 25, 2026, then monthly on the 25th."
-      ],
-      "meters": [
-        {
-          "label": "Weekly pool — all models",
-          "note": "87% used as of Nov 26, 2026, 10:59 PM ET · resets Thu Dec 3, ~3:00 AM ET",
-          "pct": 87
-        },
-        {
-          "label": "Weekly pool — Fable only",
-          "note": "24% used · same Thu Dec 3 reset",
-          "pct": 24
-        },
-        {
-          "label": "Current session (at last reading)",
-          "note": "47% used at the Nov 26, 10:59 PM ET reading",
-          "pct": 47
-        }
-      ],
-      "name": "Claude Ultra",
-      "price": "$250/mo via Google Play · $272 all-in with tax",
-      "provider": "Anthropic",
-      "icon": "logos/anthropic.svg"
-    },
-    {
-      "details": [
-        "Weekly included usage. Grok Bot line showed 522.1K tokens, all counted as “Included”, $0 credit usage (Nov 26).",
-        "API: Tier 0, balance $0.00. The “Milan build” API key is active — first test call succeeded Nov 26."
-      ],
-      "meters": [],
-      "name": "Grok Premium",
-      "price": "Subscription · renews Jan 26, 2027",
-      "provider": "xAI",
-      "icon": "logos/grok.svg"
-    },
-    {
-      "details": [
-        "Balance $8.74 observed Nov 25, 2026.",
-        "Total outside-consult spend ≈ $7.50 — the seven-brains census plus grand panels (round 1 ≈ $6.01, round 2 ≈ $1.04)."
-      ],
-      "meters": [],
-      "name": "OpenRouter",
-      "price": "Pay-as-you-go balance",
-      "provider": "Outside-consult route",
-      "icon": "logos/openrouter.svg"
-    },
-    {
-      "details": [
-        "Pace is checked on working days against a six-day week (Saturday off), with unused share rolling forward."
-      ],
-      "meters": [
-        {
-          "label": "Weekly usage at Nov 26 check",
-          "note": "100% used at the Nov 26 check · resets Sat Nov 28, 5:56 PM ET",
-          "pct": 100
-        }
-      ],
-      "name": "Muse",
-      "price": "Subscription · weekly pace tracked Sun–Fri",
-      "provider": "Meta · Power subscription",
-      "icon": "logos/meta.svg"
-    }
-  ]
+   ],
+   "name": "Muse",
+   "price": "Subscription · weekly pace tracked Sun–Fri",
+   "provider": "Meta · Power subscription",
+   "icon": "logos/meta.svg"
+  }
+ ]
 }
