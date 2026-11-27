@@ -1,22 +1,22 @@
 {
- "asof_note": "Media-lane figures are now pulled from Milan's own settled-cost ledgers on the machine (calls, tokens in/out, settled cents) — the Nov 26 readings include the first live WhatsApp photo and video tests. API-account metering (Anthropic API, Grok API, OpenRouter) joins this feed as those routes carry traffic; anything not yet metered is marked as such rather than estimated.",
- "generated_at": "2026-11-26T23:45:00-05:00",
- "generated_at_label": "Nov 26, 2026 · 11:45 PM ET",
+ "asof_note": "Figures come from Milan's own settled-cost ledgers (media lanes) and from the providers' own consoles (Anthropic API and OpenRouter, read Nov 27, 2026). The Grok API console re-check is pending a sign-in; its line carries the last confirmed reading rather than an estimate.",
+ "generated_at": "2026-11-27T10:05:00-05:00",
+ "generated_at_label": "Nov 27, 2026 · 10:05 AM ET",
  "models": [
   {
-   "cost": "0.566325¢ settled (Nov 26 day total)",
+   "cost": "0.566325¢ settled (Nov 26 day total) · Nov 27 verification call 0.19635¢ settled",
    "model": "Gemini 3.8 Flash",
    "prompts": "2 calls on Nov 26 (1 machine gate proof + 1 live WhatsApp photo)",
-   "result": "Gate passed Nov 26 · LIVE PASS Nov 26, 11:31 PM ET — read the Chaveirim flyer photo in full, answered in 25s",
+   "result": "Gate passed Nov 26 · LIVE PASS Nov 26, 11:31 PM ET — read the Chaveirim flyer photo in full, answered in 25s · Nov 27 acceptance verification PASS — all checks green, exactly one call",
    "role": "Photo reading — Milan media lane",
    "tokens": "2,391 in / 1,032 out (Nov 26 day total, from the lane ledger)",
    "icon": "logos/gemini.svg"
   },
   {
-   "cost": "0.054825¢ settled",
+   "cost": "0.054825¢ settled (Nov 26 gate) · Nov 27 verification call 0.05295¢ settled",
    "model": "Gemini",
    "prompts": "1 gate proof call",
-   "result": "Gate test passed, Nov 26",
+   "result": "Gate test passed, Nov 26 · Nov 27 acceptance verification PASS — all checks green, exactly one call",
    "role": "PDF / document reading — Milan media lane",
    "tokens": null,
    "icon": "logos/gemini.svg"
@@ -34,7 +34,7 @@
    "cost": "4.0244¢ worst case per call · 100¢ daily ceiling",
    "model": "Gemini 3.1 Flash-Lite Image",
    "prompts": "Gate calls: lifetime gate budget 2 of 2 used",
-   "result": "Gate passed at 1024×1024 on the machine route, Nov 26 · live creation over WhatsApp currently refuses — the capability-attach fix rides the Nov 27 install, then re-test",
+   "result": "Gate passed at 1024×1024 on the machine route, Nov 26 · Visit 15 (Nov 27): the delivery block is removed — the gateway can now write the outbox; live creation waits on the owner's first picture ask over WhatsApp",
    "role": "Image creation — Milan media lane",
    "tokens": null,
    "icon": "logos/gemini.svg"
@@ -43,7 +43,7 @@
    "cost": "A fraction of a cent, metered",
    "model": "Grok 4.3 (API)",
    "prompts": "1 test call",
-   "result": "HTTP 200, Nov 26",
+   "result": "HTTP 200, Nov 26 · account balance $0.00 at the Nov 26 reading — console re-check pending",
    "role": "API connectivity test",
    "tokens": null,
    "icon": "logos/grok.svg"
@@ -52,7 +52,7 @@
    "cost": "Not metered — subscription pool only",
    "model": "Claude (Fable)",
    "prompts": null,
-   "result": "Pool readings: 87% all-models weekly · 24% Fable-only weekly (Nov 26)",
+   "result": "Pool readings: 93% all-models weekly · 26% Fable-only weekly (Nov 27) · rationed to the Dec 3 reset under J's $200 envelope — $0 of the envelope spent",
    "role": "Architect / core building",
    "tokens": null,
    "icon": "logos/anthropic.svg"
@@ -67,7 +67,7 @@
    "icon": "logos/deepseek.svg"
   },
   {
-   "cost": "Included in the ≈ $7.50 outside-consult total",
+   "cost": "Via OpenRouter — counted in the OpenRouter account line ($1.41 total spend)",
    "model": "Groq GPT-OSS",
    "prompts": null,
    "result": "Consulted via OpenRouter",
@@ -77,7 +77,7 @@
    "icon_full": true
   },
   {
-   "cost": "Included in the ≈ $7.50 outside-consult total",
+   "cost": "Via OpenRouter — counted in the OpenRouter account line ($1.41 total spend)",
    "model": "OpenAI GPT",
    "prompts": null,
    "result": "Consulted via OpenRouter",
@@ -86,7 +86,7 @@
    "icon": "logos/openai.svg"
   },
   {
-   "cost": "Included in the ≈ $7.50 outside-consult total",
+   "cost": "Via OpenRouter — counted in the OpenRouter account line ($1.41 total spend)",
    "model": "Meta Llama",
    "prompts": null,
    "result": "Consulted via OpenRouter",
@@ -97,10 +97,10 @@
   {
    "model": "Anthropic API (Milan's own key)",
    "role": "Milan's API route — top-model work and training",
-   "prompts": null,
+   "prompts": "2.8M tokens in the last 7 days",
    "tokens": null,
-   "cost": "No production traffic yet",
-   "result": "Key active since Nov 20, 2026 · organisation linked Nov 25 · $200/mo Ultra API credits land from Dec 25 — metering starts when the API route carries work",
+   "cost": "$37.10 spent Nov 1–27, 2026 — all of it on the minchat key (Anthropic Console Cost page, read Nov 27)",
+   "result": "By model: Opus 4.5 $36.24 · Sonnet 4.5 $0.86. Key active since Nov 20, 2026 · organisation linked Nov 25 · $200/mo Ultra API credits land from Dec 25, 2026",
    "icon": "logos/anthropic.svg"
   },
   {
@@ -108,7 +108,7 @@
    "role": "Fast inference provider — census consults ran via OpenRouter",
    "prompts": null,
    "tokens": null,
-   "cost": "Included in the ≈ $7.50 outside-consult total",
+   "cost": "Via OpenRouter — counted in the OpenRouter account line ($1.41 total spend)",
    "result": "Status: consulted via OpenRouter · no direct metered traffic yet",
    "icon": "logos/groq.svg"
   }
@@ -119,8 +119,8 @@
    "value": "$272/mo"
   },
   {
-   "label": "metered API & media spend to date ($7.50 outside consults + 8.57¢ media gates)",
-   "value": "≈ $7.59"
+   "label": "Metered API + media spend to date (Anthropic API $37.10 + OpenRouter $1.41 + media ≈ 9¢)",
+   "value": "≈ $38.60"
   },
   {
    "label": "total paid media-gate spend, Visit 14 (Nov 26)",
@@ -136,7 +136,10 @@
   "Researched, not integrated: fal.ai (Seedream image route) and Vertex AI — no traffic, $0 spent; named here so the roster is complete.",
   "Per-prompt token counts are not exposed for subscription-pool work (Claude/Grok web apps) — those lines show pool readings instead.",
   "Visit 14 total paid media spend: 8.572525¢ across all four media lanes.",
-  "Daily call budgets on the media lanes are small during proving (photo and video lanes: 2 calls/day on Nov 26) — raising them is a settings decision at the next visit."
+  "Daily call budgets on the media lanes are small during proving (photo and video lanes: 2 calls/day on Nov 26) — raising them is a settings decision at the next visit.",
+  "Anthropic API billing (Console, read Nov 27): credit balance $13.12; auto-reload is ON — it tops up to $40 when the balance falls below $10; Nov 23 invoice $32.90 paid; a $21.78 credit grant (Nov 20) expires Nov 20, 2027.",
+  "API-account metering joined the feed Nov 27: Anthropic and OpenRouter figures are read from the providers' own consoles. The Grok API console re-check is pending a sign-in; its line carries the last confirmed reading.",
+  "Nov 27 acceptance verifications added two settled media calls: photos 0.19635¢ and documents 0.05295¢, each exactly one call at its lane's price."
  ],
  "subscriptions": [
   {
@@ -147,18 +150,18 @@
    "meters": [
     {
      "label": "Weekly pool — all models",
-     "note": "87% used as of Nov 26, 2026, 10:59 PM ET · resets Thu Dec 3, ~3:00 AM ET",
-     "pct": 87
+     "note": "93% used as of Nov 27, 2026 · resets Thu Dec 3, ~3:00 AM ET",
+     "pct": 93
     },
     {
      "label": "Weekly pool — Fable only",
-     "note": "24% used · same Thu Dec 3 reset",
-     "pct": 24
+     "note": "26% used as of Nov 27, 2026 · same Thu Dec 3 reset",
+     "pct": 26
     },
     {
-     "label": "Current session (at last reading)",
-     "note": "47% used at the Nov 26, 10:59 PM ET reading",
-     "pct": 47
+     "label": "J-approved spend envelope to Dec 3",
+     "note": "$0 spent as of Nov 27 · pool first, then the first $100 of credits only; the second $100 needs J's confirmation",
+     "pct": 0
     }
    ],
    "name": "Claude Ultra",
@@ -179,8 +182,8 @@
   },
   {
    "details": [
-    "Balance $8.74 observed Nov 25, 2026.",
-    "Total outside-consult spend ≈ $7.50 — the seven-brains census plus grand panels (round 1 ≈ $6.01, round 2 ≈ $1.04)."
+    "Balance $8.59 (OpenRouter Credits page, read Nov 27, 2026).",
+    "Total spend to date $1.41 — 80 requests, 461K tokens, all within the last 7 days. By key: minchat $0.889 · Chatroom $0.521. Funded by a single $10.00 top-up on Nov 22, 2026. The seven-brains census and panels consulted outside models through this account."
    ],
    "meters": [],
    "name": "OpenRouter",
