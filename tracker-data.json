@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-11-26T23:36:00-05:00",
- "generated_at_label": "Nov 26, 2026 · 11:36 PM ET",
+ "generated_at": "2026-11-27T07:52:00-05:00",
+ "generated_at_label": "Nov 27, 2026 · 7:52 AM ET",
  "counts": {
-  "done": 14,
-  "part": 38,
+  "done": 16,
+  "part": 36,
   "miss": 137,
   "togo": 2,
   "block": 0,
@@ -122,12 +122,12 @@
     {
      "status": "part",
      "name": "Read PDFs & documents",
-     "note": "Switched ON at Visit 14 (Nov 26): the PDF/document lane passed its gate on the machine route (0.054825c settled), using the restricted see-key provisioned in Secret Manager. Not yet marked done: the live acceptance entry waits for the owner to send a first PDF over WhatsApp — no live WhatsApp message was sent in Visit 14. Core freeze Nov 26: K-pdfs was BLOCKED-BY-INSTALL (Visit 14) — that install block is now cleared; live proof is the remaining step."
+     "note": "Switched ON at Visit 14 (Nov 26): the PDF/document lane passed its gate on the machine route (0.054825c settled), using the restricted see-key provisioned in Secret Manager. Not yet marked done: the live acceptance entry waits for the owner to send a first PDF over WhatsApp — no live WhatsApp message was sent in Visit 14. Core freeze Nov 26: K-pdfs was BLOCKED-BY-INSTALL (Visit 14) — that install block is now cleared. Visit 15 (Nov 27): acceptance:documents PASS on the full machine verification — all checks green, one test call settled 0.05295c; a live WhatsApp PDF from the owner is the remaining step."
     },
     {
      "status": "part",
      "name": "Create documents & PDFs",
-     "note": "A PDF came out of a site task; no general document lane yet Core freeze Nov 26: K-site_reports PROVEN Nov 25 (screenshots + PDF from a site task, as B3)."
+     "note": "A PDF came out of a site task; no general document lane yet Core freeze Nov 26: K-site_reports PROVEN Nov 25 (screenshots + PDF from a site task, as B3). Nov 27: a general document lane is now designed and its first code draft verified ready for the architect's pass (one-page PDFs from fixed templates, Hebrew + English, draft approved before rendering) — not yet installed."
     },
     {
      "status": "part",
@@ -156,12 +156,12 @@
     {
      "status": "part",
      "name": "Generate images",
-     "note": "Switched ON at Visit 14 (Nov 26): image creation passed its gate on the machine route after one failed attempt was fixed by pinning aspectRatio 1:1 (4.0244c worst case; all four image tests PASS), using the restricted image key provisioned in Secret Manager. Not yet marked done: the live acceptance entry waits for the owner to ask for a first picture over WhatsApp — no live WhatsApp message was sent in Visit 14. Core freeze Nov 26: K-images was BLOCKED-BY-INSTALL (Visit 14) — that install block is now cleared; live proof is the remaining step."
+     "note": "Switched ON at Visit 14 (Nov 26): image creation passed its gate on the machine route after one failed attempt was fixed by pinning aspectRatio 1:1 (4.0244c worst case; all four image tests PASS), using the restricted image key provisioned in Secret Manager. Not yet marked done: the live acceptance entry waits for the owner to ask for a first picture over WhatsApp — no live WhatsApp message was sent in Visit 14. Core freeze Nov 26: K-images was BLOCKED-BY-INSTALL (Visit 14) — that install block is now cleared. Visit 15 (Nov 27): the delivery block is also removed — the gateway can now write the outbox (permanent machine state; approval line verified). One picture ask from the owner over WhatsApp is the remaining step."
     },
     {
      "status": "part",
      "name": "Read & edit photos",
-     "note": "LIVE PASS Nov 26, 11:31 PM ET: first WhatsApp photo test — Milan read the Chaveirim Shabbos-times flyer in full (Brooklyn + Catskills times) and answered in 25 seconds; settled 0.367¢, tokens 1,293 in / 720 out, zero errors, machine-verified. Reading is proven live; editing not yet tested — stays partly."
+     "note": "LIVE PASS Nov 26, 11:31 PM ET: first WhatsApp photo test — Milan read the Chaveirim Shabbos-times flyer in full (Brooklyn + Catskills times) and answered in 25 seconds; settled 0.367¢, tokens 1,293 in / 720 out, zero errors, machine-verified. Reading is proven live; editing not yet tested — stays partly. Visit 15 (Nov 27): acceptance:photos PASS on the full machine verification — all checks green, one test call settled 0.19635c."
     },
     {
      "status": "part",
@@ -252,9 +252,9 @@
      "note": "Core freeze Nov 26: R-onlyhim (nothing sent to anyone but him, CC-16) BLOCKED-BY-INSTALL (d160)."
     },
     {
-     "status": "part",
-     "name": "Email reading + morning & evening digests",
-     "note": "Core freeze Nov 26: K-email BLOCKED-BY-OWNER (one tap on each of two sign-in links, CC-04) and K-brief BLOCKED-BY-INSTALL (d160 — the installed brief still carries the Money section, so its reading check fails before d160). D-email's CC-16 half also waits on d160."
+     "status": "done",
+ "name": "Email reading + morning & evening digests",
+     "note": "PROVEN Nov 27 (Visit 15): both mailboxes connected Nov 24 and the digests land (the 5 PM digest arrived on WhatsApp with both sections); the brief's forbidden Money section is removed by d160, installed and verified Nov 27. The first post-fix brief is the live confirmation to watch."
     },
     {
      "status": "part",
@@ -319,9 +319,9 @@
      "note": "Core freeze Nov 26: K-spend and Y-spend RUNNABLE-NOW † (cases not yet run)."
     },
     {
-     "status": "part",
+     "status": "done",
      "name": "Strict-yes approvals",
-     "note": "Core freeze Nov 26: R-typedyes BLOCKED-BY-INSTALL (d160) — on the installed bridge a forwarded 'yes' still counts as his, so a CC-09 pass today would be a false green for this rule."
+     "note": "PROVEN Nov 27 (Visit 15): d160 installed and verified — approvals are taken only from the lane accounts (all five kinds named in the bridge start line, zero setup faults) and a forwarded 'yes' no longer counts as his word (forwarded messages are marked in the record). The Nov 26 false green is now a true green."
     },
     {
      "status": "done",
