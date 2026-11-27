@@ -1,0 +1,1120 @@
+{
+ "generated_at": "2026-11-26T23:36:00-05:00",
+ "generated_at_label": "Nov 26, 2026 · 11:36 PM ET",
+ "counts": {
+  "done": 14,
+  "part": 38,
+  "miss": 137,
+  "togo": 2,
+  "block": 0,
+  "later": 1,
+  "total": 192
+ },
+ "sections": [
+  {
+   "id": "A",
+   "title": "A · Talking & understanding",
+   "items": [
+    {
+     "status": "done",
+     "name": "Chat on WhatsApp, two-way",
+     "note": "Core freeze Nov 26: the chat-half cases behind this (ambiguous ask B7, impossible ask B8, whole-bank rules BW1/BW2) are RUNNABLE-NOW — installed, cases not yet run; K-answer PROVEN."
+    },
+    {
+     "status": "done",
+     "name": "Voice notes understood",
+     "note": "Core freeze Nov 26: K-voice_in RUNNABLE-NOW † (CC-02 case not yet run); the long-voice-note case B9 is RUNNABLE-NOW."
+    },
+    {
+     "status": "done",
+     "name": "Spoken replies",
+     "note": "Core freeze Nov 26: K-voice_out BLOCKED-BY-INSTALL — the speech switch-on state is NOT FOUND in LIVE.md; if it was done, the row is RUNNABLE-NOW. Freeze cannot confirm this item's done."
+    },
+    {
+     "status": "part",
+     "name": "Tone & mood perception",
+     "note": "Approved in the capability plan; measured against your own voice baseline"
+    },
+    {
+     "status": "part",
+     "name": "Many languages",
+     "note": "The brains are multilingual; never tested as its own lane"
+    }
+   ]
+  },
+  {
+   "id": "B",
+   "title": "B · Web & errands",
+   "items": [
+    {
+     "status": "done",
+     "name": "Browse & research the web",
+     "note": "Acceptance bank 5 of 5, proven today Core freeze Nov 26: site-task cases B3/B4/B10, K-sites and D-botcheck PROVEN Nov 25; but the chat-half cases B1/B2 are RUNNABLE-NOW only, and the connected search branch (K-search, CC-01) is BLOCKED-BY-OWNER (Brave account)."
+    },
+    {
+     "status": "done",
+     "name": "Forms, sign-ins & accounts on sites",
+     "note": "Core freeze Nov 26: the visible-browser and sign-in core rows (K-visible_browser, Y-signin, Y-visible) are CANNOT-BE-CHECKED-BY-A-CASE — suite evidence only, rulings recommended."
+    },
+    {
+     "status": "part",
+     "name": "Downloads, uploads & files from the web"
+    },
+    {
+     "status": "part",
+     "name": "Purchases with your approval",
+     "note": "Approval system exists; an end-to-end agent purchase is not yet proven live Core freeze Nov 26: Y-press (press on his typed yes) is CANNOT-BE-CHECKED-BY-A-CASE; freeze recommends dropping it from the Nov 29 core until a harmless-form case exists."
+    },
+    {
+     "status": "part",
+     "name": "Multi-site errands end-to-end",
+     "note": "Single-site tasks proven; chained errands across sites are not"
+    },
+    {
+     "status": "part",
+     "name": "Gift hunting & occasion shopping",
+     "note": "Done today through Muse; the agent’s own lane is not built"
+    }
+   ]
+  },
+  {
+   "id": "C",
+   "title": "C · Coding & building",
+   "items": [
+    {
+     "status": "part",
+     "name": "Write code",
+     "note": "The brains can write it; no agent lane packages it as a service yet"
+    },
+    {
+     "status": "miss",
+     "name": "Run & test code on the machine",
+     "note": "Sandbox proof ran Nov 26 (Visit 13): verdict NOT ISOLATED — the network backstop was breached (owner-filter scripts lack SANDBOX handling) and the files probe crashed; the worker is installed but left disabled, fixes owed by the build side"
+    },
+    {
+     "status": "miss",
+     "name": "Build a website, app or game from a request"
+    },
+    {
+     "status": "miss",
+     "name": "Fix & debug your existing projects",
+     "note": "Today Claude Code does this in the build — the agent itself has no such lane"
+    },
+    {
+     "status": "miss",
+     "name": "Deploy & maintain what it builds"
+    },
+    {
+     "status": "miss",
+     "name": "Automations & app connections",
+     "note": "Make your tools work together — workflows across your services"
+    },
+    {
+     "status": "miss",
+     "name": "Dogfooding — as soon as Milan’s code worker passes the sandbox isolation proof and the engine verify-gate, real (non-self) coding tasks route through Milan’s own agents under Claude/Muse review; results feed self-training, overseers verify quality on every task. Milan’s lane never edits Milan’s own code."
+    }
+   ]
+  },
+  {
+   "id": "D",
+   "title": "D · Documents & office",
+   "items": [
+    {
+     "status": "part",
+     "name": "Read PDFs & documents",
+     "note": "Switched ON at Visit 14 (Nov 26): the PDF/document lane passed its gate on the machine route (0.054825c settled), using the restricted see-key provisioned in Secret Manager. Not yet marked done: the live acceptance entry waits for the owner to send a first PDF over WhatsApp — no live WhatsApp message was sent in Visit 14. Core freeze Nov 26: K-pdfs was BLOCKED-BY-INSTALL (Visit 14) — that install block is now cleared; live proof is the remaining step."
+    },
+    {
+     "status": "part",
+     "name": "Create documents & PDFs",
+     "note": "A PDF came out of a site task; no general document lane yet Core freeze Nov 26: K-site_reports PROVEN Nov 25 (screenshots + PDF from a site task, as B3)."
+    },
+    {
+     "status": "part",
+     "name": "Fill forms & paperwork",
+     "note": "Web forms proven; paperwork documents are not"
+    },
+    {
+     "status": "miss",
+     "name": "Spreadsheets — read, build, analyse"
+    },
+    {
+     "status": "miss",
+     "name": "Presentations & decks"
+    },
+    {
+     "status": "miss",
+     "name": "Contracts & signatures",
+     "note": "Track, chase and file — never legal advice"
+    }
+   ]
+  },
+  {
+   "id": "E",
+   "title": "E · Graphics & design",
+   "items": [
+    {
+     "status": "part",
+     "name": "Generate images",
+     "note": "Switched ON at Visit 14 (Nov 26): image creation passed its gate on the machine route after one failed attempt was fixed by pinning aspectRatio 1:1 (4.0244c worst case; all four image tests PASS), using the restricted image key provisioned in Secret Manager. Not yet marked done: the live acceptance entry waits for the owner to ask for a first picture over WhatsApp — no live WhatsApp message was sent in Visit 14. Core freeze Nov 26: K-images was BLOCKED-BY-INSTALL (Visit 14) — that install block is now cleared; live proof is the remaining step."
+    },
+    {
+     "status": "part",
+     "name": "Read & edit photos",
+     "note": "LIVE PASS Nov 26, 11:31 PM ET: first WhatsApp photo test — Milan read the Chaveirim Shabbos-times flyer in full (Brooklyn + Catskills times) and answered in 25 seconds; settled 0.367¢, tokens 1,293 in / 720 out, zero errors, machine-verified. Reading is proven live; editing not yet tested — stays partly."
+    },
+    {
+     "status": "part",
+     "name": "Logos & brand art",
+     "note": "Milan’s own logo was made this way today — through Muse, not yet the agent’s lane"
+    },
+    {
+     "status": "miss",
+     "name": "Design mockups & page layouts"
+    },
+    {
+     "status": "miss",
+     "name": "3D models & print-ready files"
+    }
+   ]
+  },
+  {
+   "id": "F",
+   "title": "F · Video",
+   "items": [
+    {
+     "status": "part",
+     "name": "Understand video, including motion",
+     "note": "LIVE PASS Nov 26, 11:31 PM ET: first WhatsApp video test — a 4-second clip described accurately (banquet hall scene) and answered in 17 seconds; settled 0.284¢, tokens 352 in / 686 out, zero errors, machine-verified. Basic understanding proven live; motion understanding not yet deeply tested — stays partly."
+    },
+    {
+     "status": "miss",
+     "name": "Create video"
+    },
+    {
+     "status": "miss",
+     "name": "Edit video"
+    },
+    {
+     "status": "miss",
+     "name": "Animation & motion graphics"
+    }
+   ]
+  },
+  {
+   "id": "G",
+   "title": "G · Music & audio",
+   "items": [
+    {
+     "status": "done",
+     "name": "Transcribe audio & voice notes",
+     "note": "Core freeze Nov 26: K-voice_in RUNNABLE-NOW † (CC-02 case not yet run)."
+    },
+    {
+     "status": "done",
+     "name": "Text-to-speech (spoken replies)",
+     "note": "Core freeze Nov 26: K-voice_out BLOCKED-BY-INSTALL — speech switch-on state NOT FOUND in LIVE.md."
+    },
+    {
+     "status": "miss",
+     "name": "Generate music",
+     "note": "Your example — it was in no plan until this map"
+    },
+    {
+     "status": "miss",
+     "name": "Mix & edit audio"
+    }
+   ]
+  },
+  {
+   "id": "H",
+   "title": "H · Calls & real-time voice",
+   "items": [
+    {
+     "status": "part",
+     "name": "Phone calls to businesses",
+     "note": "Design only; nothing connected yet"
+    },
+    {
+     "status": "later",
+     "name": "Real-time spoken conversation",
+     "note": "Your ruling: for later, after the core is complete"
+    }
+   ]
+  },
+  {
+   "id": "I",
+   "title": "I · Messaging & people",
+   "items": [
+    {
+     "status": "done",
+     "name": "WhatsApp one-to-one",
+     "note": "Core freeze Nov 26: R-onlyhim (nothing sent to anyone but him, CC-16) BLOCKED-BY-INSTALL (d160)."
+    },
+    {
+     "status": "part",
+     "name": "Email reading + morning & evening digests",
+     "note": "Core freeze Nov 26: K-email BLOCKED-BY-OWNER (one tap on each of two sign-in links, CC-04) and K-brief BLOCKED-BY-INSTALL (d160 — the installed brief still carries the Money section, so its reading check fails before d160). D-email's CC-16 half also waits on d160."
+    },
+    {
+     "status": "part",
+     "name": "Email drafting & sending"
+    },
+    {
+     "status": "togo",
+     "name": "WhatsApp groups",
+     "note": "Built & tested by Nov 29; on ~Dec 20, Meta’s gate",
+     "when": "~Dec 20"
+    }
+   ]
+  },
+  {
+   "id": "J",
+   "title": "J · Memory & learning",
+   "items": [
+    {
+     "status": "done",
+     "name": "Nothing-silently-dropped ledger",
+     "note": "Core freeze Nov 26: the ledger-backed long-voice-note case B9 is RUNNABLE-NOW (ledger on since Visit 5)."
+    },
+    {
+     "status": "part",
+     "name": "Reminders",
+     "note": "Work in the chat window; Meta template still in review"
+    },
+    {
+     "status": "part",
+     "name": "Knows you — your life, people, preferences",
+     "note": "The personal layer; your north-star, still deepening"
+    },
+    {
+     "status": "part",
+     "name": "Self-learning from results",
+     "note": "Training window running Nov 24 – Dec 7 Core freeze Nov 26: R-results and D-learning (results-only records, CC-12) BLOCKED-BY-INSTALL (d160)."
+    },
+    {
+     "status": "part",
+     "name": "Picks the cheapest brain that reliably finishes",
+     "note": "First switch offer ~Dec 8, with your yes Core freeze Nov 26: Y-switch CANNOT-BE-CHECKED-BY-A-CASE (suite proofs only)."
+    },
+    {
+     "status": "part",
+     "name": "People & relationships",
+     "note": "Remembering everyone is the personal layer; keeping-in-touch upkeep is not built"
+    },
+    {
+     "status": "miss",
+     "name": "Observance & context setup",
+     "note": "The agent proactively asks once about religious observance hours (e.g. Shabbos), the holiday calendar and greeting norms, then greets correctly by date and time; each user’s answers stay in their personal layer — only the question pattern is shared across users, never the answers Core freeze Nov 26: the Shabbos hold itself (R-shabbos) is BLOCKED-BY-INSTALL (d160, in before Fri Nov 27 14:00 or its proof moves to Sat Dec 5). This item is the setup question, a different thing — no dedicated tracker row exists for the hold."
+    }
+   ]
+  },
+  {
+   "id": "K",
+   "title": "K · Money & safety",
+   "items": [
+    {
+     "status": "done",
+     "name": "Budget caps it cannot raise itself",
+     "note": "Core freeze Nov 26: K-spend and Y-spend RUNNABLE-NOW † (cases not yet run)."
+    },
+    {
+     "status": "part",
+     "name": "Strict-yes approvals",
+     "note": "Core freeze Nov 26: R-typedyes BLOCKED-BY-INSTALL (d160) — on the installed bridge a forwarded 'yes' still counts as his, so a CC-09 pass today would be a false green for this rule."
+    },
+    {
+     "status": "done",
+     "name": "/stop, /resume + health checks",
+     "note": "Core freeze Nov 26: B5 (stop mid-task) and B6 (stalled task ends itself) PROVEN Nov 25."
+    },
+    {
+     "status": "part",
+     "name": "Complete audit log you can read",
+     "note": "Install-level audit exists; a full user-facing log is not finished Core freeze Nov 26: K-why (/why from the recorded reason, CC-07) RUNNABLE-NOW."
+    }
+   ]
+  },
+  {
+   "id": "L",
+   "title": "L · Accounts & access",
+   "items": [
+    {
+     "status": "done",
+     "name": "Sign-ins through the secure vault",
+     "note": "Core freeze Nov 26: K-passwords RUNNABLE-NOW † (CC-03 not yet run; the save itself stays a suite proof); Y-signin CANNOT-BE-CHECKED-BY-A-CASE."
+    },
+    {
+     "status": "part",
+     "name": "Two-factor codes by text"
+    },
+    {
+     "status": "part",
+     "name": "Guided connect-a-new-service flow",
+     "note": "Designed Nov 25 (your connector requirements); not built yet"
+    }
+   ]
+  },
+  {
+   "id": "M",
+   "title": "M · Home & devices",
+   "items": [
+    {
+     "status": "miss",
+     "name": "Smart-home control"
+    },
+    {
+     "status": "miss",
+     "name": "Tasks on your phone & other devices"
+    }
+   ]
+  },
+  {
+   "id": "N",
+   "title": "N · Platform & launch",
+   "items": [
+    {
+     "status": "done",
+     "name": "Name & domain — Milan, milan.bot"
+    },
+    {
+     "status": "part",
+     "name": "Google app verification",
+     "note": "HTTPS certificate is live on milan.bot; what’s left before submission is the demo video and two data-usage fields"
+    },
+    {
+     "status": "part",
+     "name": "Meta AI-provider eligibility verification (US product)",
+     "note": "Muse’s first-hand read is DONE (Nov 25): Meta’s terms bar general-purpose assistants as the primary product except in listed countries; the US is not named and eligibility is unresolved — the product must not lean on WhatsApp sign-up until settled in the product phase Core freeze Nov 26: R-provgate (the provider-terms record, CC-15) BLOCKED-BY-OWNER (OWNER-BATCH item 11), behind a lead fix to the record's dry run."
+    },
+    {
+     "status": "part",
+     "name": "Meta business verification",
+     "note": "Rejected again Nov 26 (live-checked 2:57 PM ET): the text-readable copy of the Dime letter was also rejected with the same 'isn't an accepted type' reason for legal name, address and phone. Two file versions, identical objection — the likely cause is the document category mismatch (the flow offers no 'Bank Letter' type). Next move: submit a document matching an offered type, e.g. a real Dime bank statement for the LLC. Follow-up check Nov 30."
+    },
+    {
+     "status": "togo",
+     "name": "Public launch",
+     "note": "Final gate: lawyer’s trademark clearance for “Milan”"
+    }
+   ]
+  },
+  {
+   "id": "O",
+   "title": "O · Life admin & scheduling",
+   "items": [
+    {
+     "status": "part",
+     "name": "Calendar management",
+     "note": "Reading is connected; creating/moving events and finding times across people is not built Core freeze Nov 26: K-calendar-personal PROVEN; K-calendar-business BLOCKED-BY-OWNER (his first business question + one tap)."
+    },
+    {
+     "status": "miss",
+     "name": "Book appointments & reservations",
+     "note": "Medical, services, restaurants — by web or by phone"
+    },
+    {
+     "status": "miss",
+     "name": "Travel — plan & book end-to-end",
+     "note": "Flights, stays, cars, full itinerary"
+    },
+    {
+     "status": "miss",
+     "name": "Events & simchas planning",
+     "note": "Guest lists, invitations, vendors, budgets"
+    },
+    {
+     "status": "miss",
+     "name": "Family admin",
+     "note": "School forms, kids’ schedules, household paperwork"
+    },
+    {
+     "status": "miss",
+     "name": "Government & official tasks",
+     "note": "Appointments, forms, permits, renewals"
+    },
+    {
+     "status": "miss",
+     "name": "Health admin",
+     "note": "Records in order, medication reminders, appointment prep — never medical advice"
+    }
+   ]
+  },
+  {
+   "id": "P",
+   "title": "P · Money management",
+   "items": [
+    {
+     "status": "miss",
+     "name": "Track spending, bills & balances",
+     "note": "Separate from safety caps: this is seeing your money clearly"
+    },
+    {
+     "status": "miss",
+     "name": "Bill & renewal due-date watching"
+    },
+    {
+     "status": "miss",
+     "name": "Budget & expense reports"
+    },
+    {
+     "status": "miss",
+     "name": "Gather finance & tax documents",
+     "note": "Collecting and organising — never advice"
+    },
+    {
+     "status": "miss",
+     "name": "Insurance admin",
+     "note": "Policies in one place, renewals watched, claim paperwork organised"
+    }
+   ]
+  },
+  {
+   "id": "Q",
+   "title": "Q · Writing, content & social",
+   "items": [
+    {
+     "status": "part",
+     "name": "Long-form writing",
+     "note": "Letters, posts, essays — drafting exists inside email only"
+    },
+    {
+     "status": "miss",
+     "name": "Social media posting & scheduling"
+    },
+    {
+     "status": "miss",
+     "name": "Newsletters & broadcasts"
+    },
+    {
+     "status": "miss",
+     "name": "Scripts, speeches & toasts"
+    },
+    {
+     "status": "part",
+     "name": "Translate & interpret",
+     "note": "Documents, chats, live conversation — the brains can; no lane or proof yet"
+    }
+   ]
+  },
+  {
+   "id": "R",
+   "title": "R · Business operations",
+   "items": [
+    {
+     "status": "miss",
+     "name": "Store admin — listings, prices, orders",
+     "note": "Ealzy, EasBid, Larkmoor back-office work"
+    },
+    {
+     "status": "miss",
+     "name": "Customer messages & support replies"
+    },
+    {
+     "status": "miss",
+     "name": "Sales & ads monitoring, with reports"
+    },
+    {
+     "status": "miss",
+     "name": "Supplier & contractor coordination"
+    }
+   ]
+  },
+  {
+   "id": "S",
+   "title": "S · Watching & alerts",
+   "items": [
+    {
+     "status": "miss",
+     "name": "Price-drop & restock watches"
+    },
+    {
+     "status": "part",
+     "name": "News & topic tracking briefs",
+     "note": "Email digests exist; tracking any topic you name does not"
+    },
+    {
+     "status": "miss",
+     "name": "Website & listing change alerts"
+    },
+    {
+     "status": "part",
+     "name": "Deadline, renewal & birthday watching",
+     "note": "Reminders exist when you set them; proactively watching for them is not built"
+    }
+   ]
+  },
+  {
+   "id": "T",
+   "title": "T · Data & deep research",
+   "items": [
+    {
+     "status": "part",
+     "name": "Deep research reports",
+     "note": "Web search is proven; report-grade, source-checked research is not Core freeze Nov 26: B2 RUNNABLE-NOW (honest branch); the connected search branch K-search is BLOCKED-BY-OWNER (Brave account + key)."
+    },
+    {
+     "status": "miss",
+     "name": "Web scraping & data collection"
+    },
+    {
+     "status": "miss",
+     "name": "Lead & contact lists"
+    },
+    {
+     "status": "miss",
+     "name": "Dataset cleaning & analysis"
+    }
+   ]
+  },
+  {
+   "id": "U",
+   "title": "U · Files, photos & backup",
+   "items": [
+    {
+     "status": "miss",
+     "name": "Organise Drive & files",
+     "note": "Reading is connected; tidying, naming, deduplicating is not Core freeze Nov 26: Drive READING is further than this item suggests — K-drive-personal PROVEN on the machine; K-drive-business BLOCKED-BY-OWNER. Organising itself remains unbuilt; no dedicated tracker row exists for Drive reading."
+    },
+    {
+     "status": "miss",
+     "name": "Photo library organising & albums"
+    },
+    {
+     "status": "part",
+     "name": "Backup checks",
+     "note": "Knowing your important things are actually backed up. Verified Nov 26 (Visit 13): daily GCP snapshot policy office-worker-daily-30d (daily 03:00, 30-day retention) created and verified attached to the VM boot disk — the schedule is in place, but no completed snapshot or restore test has been verified yet."
+    },
+    {
+     "status": "miss",
+     "name": "Account cleanup & data rights",
+     "note": "Close old accounts, export your data, opt-outs"
+    }
+   ]
+  },
+  {
+   "id": "V",
+   "title": "V · Help, advocacy & learning",
+   "items": [
+    {
+     "status": "miss",
+     "name": "Personal tech support",
+     "note": "“Walk me through fixing this” — step-by-step, on your devices"
+    },
+    {
+     "status": "miss",
+     "name": "Tutoring — learn anything, any level"
+    },
+    {
+     "status": "miss",
+     "name": "Advocacy in writing",
+     "note": "Refunds, complaints, disputes — handled in writing, with your approval"
+    },
+    {
+     "status": "part",
+     "name": "Read anything — handwriting, scans, screenshots",
+     "note": "Photo reading switched ON at Visit 14 (Nov 26) on the machine route (see-test + wa-photos-test PASS). Not yet marked done: the live acceptance entry waits for the owner's first photo over WhatsApp, and handwriting/OCR remains unproven. Core freeze Nov 26: K-photos was BLOCKED-BY-INSTALL (Visit 14) — that install block is now cleared; live proof is the remaining step."
+    },
+    {
+     "status": "miss",
+     "name": "Urgent help",
+     "note": "Fast rebooking, lockouts, lost-device steps — when minutes matter"
+    }
+   ]
+  },
+  {
+   "id": "W",
+   "title": "W · Audio productions",
+   "items": [
+    {
+     "status": "miss",
+     "name": "Podcasts & audio briefings from any material",
+     "note": "Turn documents, news or a topic into something you can listen to"
+    },
+    {
+     "status": "miss",
+     "name": "Voice productions — narration & dubbing"
+    }
+   ]
+  },
+  {
+   "id": "X",
+   "title": "X · Entertainment & play",
+   "items": [
+    {
+     "status": "miss",
+     "name": "Play games together",
+     "note": "Chess, word games, trivia — in the chat"
+    },
+    {
+     "status": "part",
+     "name": "Recommendations — movies, books, music",
+     "note": "The brains can suggest; nothing is tuned to your taste yet"
+    },
+    {
+     "status": "miss",
+     "name": "Playlists & entertainment planning"
+    }
+   ]
+  },
+  {
+   "id": "RT",
+   "title": "Census · Red-team additions",
+   "items": [
+    {
+     "status": "miss",
+     "name": "Accessibility conversions",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Livestreaming",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Machines & hardware operation",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Vehicle admin & telematics",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Digital security watch",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Physical inventory",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Moving & relocation",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Crypto & digital assets",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Points, miles & loyalty",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Domain & web-asset portfolio admin",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Physical mail, printing & fax",
+     "when": "December"
+    }
+   ]
+  },
+  {
+   "id": "PC",
+   "title": "Census · Profession connections",
+   "items": [
+    {
+     "status": "miss",
+     "name": "Health-systems (EHR) connection",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Grants & funding database",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Profession connector — accounting ledger",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Profession connector — CRM",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Profession connector — ad platforms",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Profession connector — property listings / MLS",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Profession connector — carrier / freight",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Profession connector — field-service booking & dispatch",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Profession connector — brokerage / market data",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Profession connector — scholarly library",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Profession connector — breach / security feeds",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Profession connector — fare / hotel inventory",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Profession connector — customs / trade data",
+     "when": "December"
+    }
+   ]
+  },
+  {
+   "id": "Y",
+   "title": "Y · The Navigator Core",
+   "items": [
+    {
+     "status": "miss",
+     "name": "Goal decomposition",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Power / tool selection",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Cost & latency estimation",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Error detection",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Escalation",
+     "when": "December"
+    }
+   ]
+  },
+  {
+   "id": "NAICS",
+   "title": "Census · Industry “hands” (NAICS sweep)",
+   "items": [
+    {
+     "status": "miss",
+     "name": "Precision-ag platform + satellite crop imagery (NDVI)",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Livestock / herd system",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Fisheries VMS + e-catch reporting",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Subsurface / production data",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Resource-regulator e-filing",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Industrial SCADA / PLC telemetry",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Grid outage management + smart-meter (AMI) data",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Wholesale energy market data",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Construction project-management platform",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "LIMS + electronic lab notebook",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "FDA eCTD filing channel",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Warehouse Management System",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "AIS vessel tracking",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Rail operations data",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Airline ops systems",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Telecom OSS / BSS",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Audience measurement data",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Core banking + loan origination",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Insurance policy admin",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "SEC EDGAR filing channel / data",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "LMS + SIS (schools)",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Medical imaging PACS / DICOM",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "EPA hazardous-waste e-Manifest",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Hotel PMS",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Casino / gaming systems + regulator reporting",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "OEM repair-information data",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Public-safety CAD dispatch + RMS",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Benefits eligibility / case-management systems",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Government permitting / licensing admin-side",
+     "when": "December"
+    }
+   ]
+  },
+  {
+   "id": "DUTY",
+   "title": "Census · Duty layer",
+   "items": [
+    {
+     "status": "miss",
+     "name": "Enforced game-plan workflows (gated playbooks)",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Forfeiture calendar (deadline classes)",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Licensure / unauthorized-practice gates",
+     "when": "December"
+    },
+    {
+     "status": "done",
+     "name": "Licensed-line rule per profession",
+     "note": "Installed Nov 26 (Visit 12, d154) and verified through the production routing path: insurance→money, lease→legal, weather→everyday Core freeze Nov 26: R-licensed RUNNABLE-NOW † — d154 routing is installed (Visit 12), but the CC-17 records-half case has not yet run."
+    },
+    {
+     "status": "miss",
+     "name": "Duty of candor / informed refusal",
+     "when": "December",
+     "note": "Core freeze Nov 26: B8 (impossible ask: the real reason at once) RUNNABLE-NOW — nearest core row to this item."
+    },
+    {
+     "status": "miss",
+     "name": "Fiduciary & estate execution",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Regulated representation (notary, witnessing, POA)",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Role separation (authority-in-context)",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Multi-principal conflict protocol",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Fieldwork & human handoffs",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Recovery & dispute workflows",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Digital legacy & succession",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Safety-net navigation",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Active fraud defense",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Non-fabrication verification (source check or “unchecked” label)",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Unit-critical second computation path",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Offline-first / low-connectivity mode",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Language & script coverage",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Degraded-institutions mode",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Human professional network",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Reconciliation / source-of-truth map",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Spill controls (marked / confidential material)",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Compulsion & undue-influence detection",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Crisis redirect to emergency services",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Data-retention schedule + deletion-propagation acceptance test",
+     "note": "Claude (Fable) agreed to add it. The retention schedule itself plus a deletion-propagation acceptance test proving deletions propagate everywhere the schedule requires; the retention periods themselves are the owner’s pending decision",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Quantified launch gates",
+     "note": "Product phase. Zero unauthorized actions (already a whole-bank rule); ≥90% useful-correct on a 100-task bank and ≥95% citation match as product-phase gates (numbers pending the owner’s confirmation); first-response time measured from a machine baseline for no-lookup asks, NOT a fixed 5-second rule",
+     "when": "December"
+    },
+    {
+     "status": "miss",
+     "name": "Citation discipline as a measured standard",
+     "note": "Citation discipline as a measured standard — it goes into the acceptance bank and the judge, so citation quality is scored, not assumed",
+     "when": "December"
+    }
+   ]
+  }
+ ]
+}
