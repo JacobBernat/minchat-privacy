@@ -2,8 +2,8 @@
  "generated_at": "2026-11-27T07:52:00-05:00",
  "generated_at_label": "Nov 27, 2026 · 7:52 AM ET",
  "counts": {
-  "done": 16,
-  "part": 36,
+  "done": 17,
+  "part": 35,
   "miss": 137,
   "togo": 2,
   "block": 0,
@@ -154,9 +154,9 @@
    "title": "E · Graphics & design",
    "items": [
     {
-     "status": "part",
+     "status": "done",
      "name": "Generate images",
-     "note": "Switched ON at Visit 14 (Nov 26): image creation passed its gate on the machine route after one failed attempt was fixed by pinning aspectRatio 1:1 (4.0244c worst case; all four image tests PASS), using the restricted image key provisioned in Secret Manager. Not yet marked done: the live acceptance entry waits for the owner to ask for a first picture over WhatsApp — no live WhatsApp message was sent in Visit 14. Core freeze Nov 26: K-images was BLOCKED-BY-INSTALL (Visit 14) — that install block is now cleared. Visit 15 (Nov 27): the delivery block is also removed — the gateway can now write the outbox (permanent machine state; approval line verified). One picture ask from the owner over WhatsApp is the remaining step. LIVE TEST Nov 27 11:05 ET — NEGATIVE: the owner asked over WhatsApp; Milan replied it has no image-making tool in the chat and delivered no picture, although the tool is provably offered in his session (tools.effective). Delivery block fixed; the defect is the model not calling the tool. Fix queued for Claude; row stays partly until a picture actually arrives over WhatsApp."
+     "note": "Switched ON at Visit 14 (Nov 26): image creation passed its gate on the machine route after one failed attempt was fixed by pinning aspectRatio 1:1 (4.0244c worst case; all four image tests PASS), using the restricted image key provisioned in Secret Manager. Not yet marked done: the live acceptance entry waits for the owner to ask for a first picture over WhatsApp — no live WhatsApp message was sent in Visit 14. Core freeze Nov 26: K-images was BLOCKED-BY-INSTALL (Visit 14) — that install block is now cleared. Visit 15 (Nov 27): the delivery block is also removed — the gateway can now write the outbox (permanent machine state; approval line verified). One picture ask from the owner over WhatsApp is the remaining step. LIVE TEST Nov 27 11:05 ET — NEGATIVE: the owner asked over WhatsApp; Milan replied it has no image-making tool in the chat and delivered no picture, although the tool is provably offered in his session (tools.effective). Delivery block fixed; the defect is the model not calling the tool. Fix queued for Claude; row stays partly until a picture actually arrives over WhatsApp. LIVE PASS Nov 27 11:28-11:29 ET: after the gateway top-level allow-list fix (11:26 ET), the owner asked twice over WhatsApp and Milan delivered both pictures — a green summer tree centred in a snowy field, and a summer beach with winter blending on the right side only — and acknowledged its earlier refusal was wrong. acceptance:image RECORDED; row DONE."
     },
     {
      "status": "part",
